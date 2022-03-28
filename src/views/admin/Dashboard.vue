@@ -1,5 +1,5 @@
 <template>
-  <div class="admin container-fluid row g-0 min-vh-100 bg-secondary">
+  <div class="admin container-fluid row g-0 min-vh-100">
     <div class="col-lg-2 text-light">
       <nav
         class="
@@ -100,6 +100,7 @@ export default {
       apiUserCheck()
         .then((res) => {
           if (!res.data.success) {
+            console.log(res);
             this.$pushMessage(res);
             this.$router.push('/login');
           } else {

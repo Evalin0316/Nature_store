@@ -194,6 +194,7 @@ export default {
         this.isModal = 'edit';
         this.modalTitle = '編輯商品';
         this.modalData = JSON.parse(JSON.stringify(item));
+        console.log(this.modalData);
         if (!this.modalData.imagesUrl) {
           this.modalData.imagesUrl = [];
         }

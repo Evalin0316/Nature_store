@@ -41,11 +41,6 @@
           出外居家穿著舒適方便
           <br />
           辦公室上班族最佳首選
-          <p class="mt-3">
-            <i class="fas fa-lg fa-cookie cookie"></i>
-            <i class="fas fa-lg fa-cookie-bite cookie mx-3"></i>
-            <i class="fas fa-lg fa-cookie-bite cookie"></i>
-          </p>
         </div>
       </div>
       <div class="row g-3 mb-5 flex-md-row-reverse fade-out">
@@ -74,11 +69,6 @@
           男士打造自然穿著又不失時尚
           <br />
          不論小隻女高女孩皆可駕馭
-          <p class="mt-3">
-            <i class="fas fa-lg fa-cookie-bite cookie"></i>
-            <i class="fas fa-lg fa-cookie cookie mx-3"></i>
-            <i class="fas fa-lg fa-cookie-bite cookie"></i>
-          </p>
         </div>
       </div>
       <FrontSwiper
@@ -154,7 +144,7 @@ export default {
             this.$pushMessage(res);
           }
           this.products = res.data.products.reverse();
-          this.promote = this.products.filter((item) => item.is_promote);
+          this.promote = this.products.filter((item) => item.title);
           setTimeout(() => {
             this.$emitter.emit('page-loading', false);
             this.fadeInOnLoad();

@@ -159,7 +159,7 @@ export default {
           this.category = this.product.category;
           const { 0: img } = this.product.imagesUrl;
           this.enterImage = img;
-          document.title = `${this.product.title} - PANYA`;
+          document.title = `${this.product.title} - Nature`;
           this.filterProducts();
           this.getSiblingProduct(this.products);
           this.getMaxNum();

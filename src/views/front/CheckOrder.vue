@@ -75,7 +75,8 @@
           :disabled="isDiscount"
           @click="useCoupon">
             套用優惠券
-            <Spinner :spin-item="code"/>
+            <Spinner :spin-item="code"
+            />
           </button>
         </div>
         <p class="text-primary" v-if="!isDiscount">
@@ -178,7 +179,7 @@ export default {
         address: '',
       },
       message: '',
-      code: 'panyaonline70',
+      code: '',
       carts: '',
       isDiscount: false,
     };

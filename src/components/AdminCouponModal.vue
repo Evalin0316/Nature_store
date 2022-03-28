@@ -175,6 +175,7 @@ export default {
           this.datas.is_enabled = 0;
         }
         if (val.due_date < val.start_date) {
+          console.log(val.due_date);
           this.$pushMessage(false, '截止日不可小於起始日');
           this.datas.due_date = oldVal.due_date;
         }
