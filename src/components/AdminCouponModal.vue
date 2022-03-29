@@ -158,6 +158,11 @@ export default {
   methods: {
     updateDatas() {
       if (!this.isValid) {
+        alert('請填入優惠券標題和優惠碼'); // eslint-disable-line no-alert
+        return;
+      }
+      if (this.datas.due_date < this.datas.start_date) {
+        alert('截止日不可小於起始日'); // eslint-disable-line no-alert
         return;
       }
       this.$emit('update-data', this.datas);
@@ -175,8 +180,7 @@ export default {
           this.datas.is_enabled = 0;
         }
         if (val.due_date < val.start_date) {
-          console.log(val.due_date);
-          this.$pushMessage(false, '截止日不可小於起始日');
+          // this.$pushMessage(false, '截止日不可小於起始日');
           this.datas.due_date = oldVal.due_date;
         }
       },
