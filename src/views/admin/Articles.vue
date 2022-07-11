@@ -156,7 +156,7 @@ export default {
         this.modal = bsModal('articleModal');
         this.isModal = 'add';
         this.modalData = {
-          author: 'Erica',
+          author: '',
           create_at: new Date().getTime(),
           isPublic: true,
           content: '',
