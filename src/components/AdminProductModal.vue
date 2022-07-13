@@ -309,7 +309,7 @@
           <button
             type="submit"
             class="btn btn-primary"
-            @click="updateDatas"
+            @click="updateData"
           >
             儲存
           </button>
@@ -423,7 +423,7 @@ export default {
       changeTab(pills);
       changeTab(panes);
     },
-    updateDatas() {
+    updateData() {
       if (!this.isValid) {
         return;
       }

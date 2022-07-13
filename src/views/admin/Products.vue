@@ -21,7 +21,7 @@
       class="row g-0 list-unstyled rounded p-2 products-list-header text-nowrap"
     >
       <li class="col-1 d-none d-md-block">分類</li>
-      <li class="col-3 text-start">商品名稱</li>
+      <li class="col-3">商品名稱</li>
       <li class="col-2">原價</li>
       <li class="col-2">售價</li>
       <li class="col-1">啟用</li>
@@ -31,7 +31,7 @@
     <ul class="list-group list-group-flush shadow-sm">
       <li class="list-group-item p-2" v-for="item in filterDatas" :key="item.id">
         <div class="col-1 d-none d-md-block">{{ item.category }}</div>
-        <div class="col-3 text-start">{{ item.title }}</div>
+        <div class="col-3">{{ item.title }}</div>
         <div class="col-2">{{ item.origin_price }}</div>
         <div class="col-2">{{ item.price }}</div>
         <div class="col-1 text-success">
